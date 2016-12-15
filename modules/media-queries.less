@@ -1,3 +1,5 @@
+@import "grid.less";
+
 /** --------------------------------------------------------------
  *  Responsive design
  */
@@ -6,21 +8,36 @@ img {
 }
 
 @media screen and (max-width: 900px) {
-    .site-logo-text {
-        width: 30%;
-        padding-top: 15px;
+
+    .sidebar {
+    .column(24);
     }
+
+    .main.has-sidebar-left {
+        .column(24);
+    }
+
 }
 
 @media screen and (max-width: 755px) {
-    .site-logo-text {
-        width: 90%;
-        padding-top: 15px;
+
+    .site-header {
+        .column(24);
+
+        .site-logo-text {
+            .column(20);
+            font-size: 2.5em;
+
+            & a {
+                color: #fff;
+            }
+        }
+
+        .navbar2 {
+            display: none;
+        }
     }
 
-    .navbar2 {
-        display: none;
-    }
 }
 
 @media screen and (min-width: 755px) {

@@ -1,0 +1,153 @@
+@import "grid.less";
+
+@maxWidth: 1200px;
+@magicNumber: 16px;
+
+@columnWidth:   30;
+@gutterWidth:   10;
+@columns:       24;
+
+@gridImage: '../img/grid/grid950x24x30x10-nomargin.png';
+//@gridImage: '../img/grid/grid940x12x60x20-nomargin.png';
+
+@hgridImage: '../img/grid/horisontal-grid-22.png';
+//@hgridImage: '../img/grid/horisontal-grid-24.png';
+
+body {
+    background-color: white;
+}
+
+.inner-wrap {
+    .container(@maxWidth);
+    //.showGrid(@maxWidth, @gridImage);
+}
+
+.row {
+    .row();
+}
+
+.outer-wrap-main,
+.after-main,
+.footer-column-wrapper {
+    margin-bottom: @magicNumber;
+}
+
+.outer-wrap-header {
+    width: 100%;
+    background-color: #29b6f6;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.outer-wrap-footer {
+    width: 100%;
+    background-color: #ff9800;
+}
+
+.site-header {
+    .column(24);
+
+    .site-logo-text {
+        .column(6);
+        font-size: 2.5em;
+
+        & a {
+            color: #fff;
+        }
+    }
+
+    .navbar2 {
+        .column(18);
+        text-align: right;
+        color: white;
+    }
+}
+
+.flash-wrap {
+    .column(24);
+}
+
+.main {
+    .column(22);
+    .push(1);
+}
+
+img {
+    width: 100%;
+}
+
+.main.has-sidebar-left {
+    .column(18);
+}
+
+.after-main {
+    .column(22);
+    .push(1);
+}
+
+.sidebar {
+    .column(6);
+}
+
+.next-previous {
+    width: 100%;
+
+    & .next {
+        float: right;
+    }
+}
+
+.footer {
+    .column(24);
+}
+
+.footer-column {
+    .column(@columns / 3);
+    color: white;
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.footer-column-wrapper {
+    margin-bottom: @magicNumber;
+}
+
+.footer-column-wrapper {
+    .clearfix();
+}
+
+.site-footer {
+    .column(24);
+    padding-bottom: 10px;
+    color: white;
+    text-align: center;
+
+    a {
+        color: white;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+
+// Show grid on page Grid
+.route-grid {
+    .showGrid(@maxWidth, @gridImage);
+}
+
+.route-typography {
+    .showTypoGrid();
+}
