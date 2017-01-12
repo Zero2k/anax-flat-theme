@@ -1,0 +1,113 @@
+@import url(style.less);
+
+/** FONT STYLE **/
+
+@fontColorWhite: #FFF;
+
+@fontFamily: monospace;
+@fontColor: #686868;
+@fontSize: 15px;
+
+@h1BottomBorderSize:    5px;
+@h1BottomBorderStyle:   dotted;
+@h1BottomBorderColor:   #ABABAB;
+@h1FontWeight: 600;
+
+@linkColor: #FF5722;
+
+/** ELEMENT STYLE **/
+
+@headerColor: #FF5722;
+@footerColor: #424242;
+
+/** CUSTOM STYLE **/
+
+html.light {
+
+    h1 {
+        border-bottom: @h1BottomBorderSize @h1BottomBorderStyle @h1BottomBorderColor;
+        font-weight: @h1FontWeight;
+        font-family: @fontFamily;
+        padding-bottom: 10px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-family: @fontFamily;
+    }
+
+    p {
+        font-family: @fontFamily;
+        color: @fontColor;
+        font-size: @fontSize;
+    }
+
+    a {
+        color: @linkColor;
+    }
+
+    .navbar2 {
+        a {
+            color: @fontColorWhite;
+        }
+
+        // .selected {
+        //     border: 1px solid #E91C63;
+        //     background: #E91C63;
+        //     border-radius: 2px;
+        //     text-decoration: none;
+        // }
+    }
+
+    .outer-wrap-header {
+        background-color: @headerColor;
+    }
+
+    .outer-wrap-footer {
+        background-color: @footerColor;
+    }
+
+    .after-main {
+        border-top: 3px dotted #ABABAB;
+    }
+
+    .footer-column-wrapper {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #FFF;
+
+        & .footer-column-1, .footer-column-2 {
+            border-right: 1px solid #FFF;
+        }
+    }
+
+    .footer-column-x {
+        padding: 12px;
+        height: 195px;
+    }
+
+    .footer-column {
+        color: #FFF;
+
+        h4 {
+            font-size: 23px;
+        }
+        p {
+            color: @fontColorWhite;
+        }
+    }
+
+    .site-footer {
+        p {
+            color: @fontColorWhite;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .footer-column-1, .footer-column-2 {
+            border-right: 0 !important;
+            border-bottom: 1px solid #FFF;
+        }
+    }
+
+}
