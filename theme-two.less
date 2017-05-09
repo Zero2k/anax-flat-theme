@@ -1,0 +1,180 @@
+@import url(style.less);
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,600);
+
+// THEME ONE - UNITY
+
+/** FONT STYLE **/
+
+@fontColorWhite: #FFF;
+@fontColorBlack: #000;
+@fontColorPurple: #FA22FF;
+@fontColorOrange: #FFAF00;
+@fontColorGreen: #7FBD00;
+
+@fontFamily: 'Raleway', sans-serif;
+@fontColor: #FFF;
+@fontSize: 16px;
+@fontWeight: 600;
+
+@h1BottomBorderSize:    5px;
+@h1BottomBorderStyle:   dotted;
+@h1BottomBorderColor:   #ABABAB;
+@h1FontWeight: 600;
+
+@linkColor: #FFF;
+@linkColorHovor: #FFF;
+
+/** ELEMENT STYLE **/
+
+@headerColor: #FFF;
+@footerColor: #FFF;
+@bodyColor: #000;
+
+
+/** CUSTOM STYLE **/
+
+html.typography {
+
+    body {
+        background-color: @bodyColor;
+        &.route-typography {
+            & p {
+                color: #000;
+            }
+        }
+        &.route-grid {
+            & p {
+                color: #000;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: @h1FontWeight;
+        font-family: @fontFamily;
+        padding: 5px;
+        color: @fontColorWhite;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-family: @fontFamily;
+        color: @fontColorWhite;
+    }
+
+    p {
+        font-family: @fontFamily;
+        color: @fontColor;
+        font-size: @fontSize;
+    }
+
+    a {
+        color: @linkColor;
+        font-weight: @fontWeight;
+        &:hover {
+                color: @linkColorHovor;
+        }
+    }
+
+    li {
+        font-family: @fontFamily;
+        color: @fontColor;
+        font-size: @fontSize;
+    }
+
+    figure {
+        border: 2px solid #FFF;
+    }
+
+    table {
+        color: #FFF;
+    }
+
+    .rm-default li ul li a {
+        color: #000;
+        background-color: white;
+    }
+
+    .site-logo-text a {
+        color: @fontColorBlack;
+    }
+
+    .navbar2 {
+        a {
+            color: @fontColorWhite;
+        }
+
+        // .selected {
+        //     border: 1px solid #E91C63;
+        //     background: #E91C63;
+        //     border-radius: 2px;
+        //     text-decoration: none;
+        // }
+    }
+
+    .rm-navbar ul {
+        li {
+            background-color: #000;
+        }
+    }
+
+    .outer-wrap-header {
+        background: @headerColor;
+    }
+
+    .outer-wrap-footer {
+        background: @footerColor;
+    }
+
+    .after-main {
+        border-top: 3px dotted #ABABAB;
+    }
+
+    .footer-column-wrapper {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #000;
+
+        & .footer-column-1, .footer-column-2, .footer-column-3 {
+            // border-right: 1px solid #000;
+            background-color: #000;
+        }
+    }
+
+    .footer-column-x {
+        padding: 12px;
+        height: 195px;
+    }
+
+    .footer-column {
+        color: @fontColorWhite;
+
+        h4 {
+            font-size: 23px;
+            color: @fontColorWhite;
+        }
+        p {
+            color: @fontColorWhite;
+        }
+        a {
+            color: @fontColorWhite;
+        }
+    }
+
+    .site-footer {
+        p {
+            color: @fontColorBlack;
+        }
+        a {
+            color: @fontColorBlack;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .footer-column-1, .footer-column-2 {
+            border-right: 0 !important;
+            border-bottom: 1px solid #FFF;
+        }
+    }
+
+}
