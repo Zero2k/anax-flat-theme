@@ -1,0 +1,181 @@
+@import url(style.less);
+@import url(http://fonts.googleapis.com/css?family=Raleway:300,600);
+
+// THEME ONE - CONTRAST
+
+/** FONT STYLE **/
+
+@fontColorWhite: #FFF;
+@fontColorPurple: #FA22FF;
+@fontColorOrange: #FFAF00;
+@fontColorGreen: #7FBD00;
+@fontColorGrey: #2D2D2D;
+
+@fontFamily: 'Raleway', sans-serif;
+@fontColor: #FFF;
+@fontSize: 16px;
+@fontWeight: 600;
+
+@h1BottomBorderSize:    5px;
+@h1BottomBorderStyle:   dotted;
+@h1BottomBorderColor:   #ABABAB;
+@h1FontWeight: 600;
+
+@linkColor: #2D2D2D;
+@linkColorHovor: #FFF;
+
+/** ELEMENT STYLE **/
+
+@headerColor: #7fbd00;
+@footerColor: #7fbd00;
+@bodyColor: #fe2712;
+
+
+/** CUSTOM STYLE **/
+
+html.typography {
+
+    body {
+        background: url(../img/Blue-Fire.png) left bottom repeat-x;
+        &.route-typography {
+            & p {
+                color: #000;
+            }
+        }
+        &.route-grid {
+            & p {
+                color: #000;
+            }
+        }
+    }
+
+    h1 {
+        border-bottom: @h1BottomBorderSize @h1BottomBorderStyle @h1BottomBorderColor;
+        font-weight: @h1FontWeight;
+        font-family: @fontFamily;
+        padding-bottom: 10px;
+        color: @fontColorGrey;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-family: @fontFamily;
+        color: @fontColorGrey;
+    }
+
+    p {
+        font-family: @fontFamily;
+        color: @fontColor;
+        font-size: @fontSize;
+    }
+
+    a {
+        color: @linkColor;
+        font-weight: @fontWeight;
+        &:hover {
+                color: @linkColorHovor;
+        }
+    }
+
+    li {
+        font-family: @fontFamily;
+        color: @fontColor;
+        font-size: @fontSize;
+    }
+
+    .wrap-all {
+        background: rgba(120, 120, 120, 0.8);
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 1200px;
+    }
+
+    .rm-default li ul li a {
+        color: #000;
+        background-color: white;
+    }
+
+    .navbar2 {
+        a {
+            color: @fontColorWhite;
+        }
+
+        // .selected {
+        //     border: 1px solid #E91C63;
+        //     background: #E91C63;
+        //     border-radius: 2px;
+        //     text-decoration: none;
+        // }
+    }
+
+    .outer-wrap-header {
+        background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;
+    }
+
+    .outer-wrap-footer {
+        background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+        background-color:#282828;
+        background-size:16px 16px;
+    }
+
+    .after-main {
+        border-top: 3px dotted #ABABAB;
+    }
+
+    .footer-column-wrapper {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #FFF;
+
+        & .footer-column-1, .footer-column-2 {
+            border-right: 1px solid #FFF;
+        }
+    }
+
+    .footer-column-x {
+        padding: 12px;
+        height: 195px;
+    }
+
+    .footer-column {
+        color: #FFF;
+
+        h4 {
+            font-size: 23px;
+            color: @fontColorWhite;
+        }
+        p {
+            color: @fontColorWhite;
+        }
+        a {
+            color: @fontColorWhite;
+        }
+    }
+
+    .site-footer {
+        p {
+            color: @fontColorWhite;
+        }
+        a {
+            color: @fontColorWhite;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        .footer-column-1, .footer-column-2 {
+            border-right: 0 !important;
+            border-bottom: 1px solid #FFF;
+        }
+    }
+
+}
